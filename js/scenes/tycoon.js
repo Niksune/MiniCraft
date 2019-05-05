@@ -14,6 +14,7 @@
     create: function () {
 
         Tycoon = this.scene.get("Tycoon");
+        Tycoon.scene.start('Craft');
 
     }
 });
