@@ -1,3 +1,3 @@
 # Craft
 
-A game where you craft items in a mini RPG style game.
+A mini RPG style game focused on ressources gathering and crafting.
