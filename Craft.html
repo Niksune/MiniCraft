@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crafting</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/lib/jquery-3.5.1.min.js"></script>
 </head>
+
 <body>
-
-    <div id="actionNeeded">Test</div>
-
+    <div id="craft">
+        <div id="topBar">Fabrication en cours : Épée Vorpale</div>
+        <div id="progress">
+            <div class="print" id="time">Temps restant : {{time}}</div>
+            <div class="print" id="score">Score : {{score}}</div>
+        </div>
+        <div id="actionNeeded"><img v-bind:src="'ressources/images/competences/' + actionNeeded + '.png'"></div>
+        <div id="actionButtons">
+            <div>Cliquez sur une action !</div>
+            <div class="actions" id="action1" @click="clickAction('action1')"><img
+                    src="ressources/images/competences/marteau.png"></div>
+            <div class="actions" id="action2" @click="clickAction('action2')"><img
+                    src="ressources/images/competences/scie.png"></div>
+            <div class="actions" id="action3" @click="clickAction('action3')"><img
+                    src="ressources/images/competences/tournevis.png"></div>
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
+
 </html>
