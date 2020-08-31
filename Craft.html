@@ -12,14 +12,14 @@
 
 <body>
     <div id="craft">
-        <div id="topBar">Fabrication en cours : Épée Vorpale</div>
+        <div id="topBar">Clique le symbole qui apparait !</div>
         <div id="progress">
-            <div class="print" id="time">Temps restant : {{time}}</div>
+            <div class="print" id="time">Temps restant : {{printTime}}</div>
             <div class="print" id="score">Score : {{score}}</div>
         </div>
-        <div id="actionNeeded"><img v-bind:src="'ressources/images/competences/' + actionNeeded + '.png'"></div>
+        <div id="start" v-if="moment == 'beforeGame'"><button @click="initialize()">Commencer !</button></div>
+        <div id="actionNeeded" v-else><img v-bind:src="'ressources/images/competences/' + nameAction + '.png'"></div>
         <div id="actionButtons">
-            <div>Cliquez sur une action !</div>
             <div class="actions" id="action1" @click="clickAction('action1')"><img
                     src="ressources/images/competences/marteau.png"></div>
             <div class="actions" id="action2" @click="clickAction('action2')"><img
