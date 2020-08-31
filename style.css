@@ -25,3 +25,17 @@ div {
     border: 0em;
 }
 
+@media (max-width: 600px){
+    div {
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+    #craft {
+        width: 75%;
+        margin: 2em auto;
+    }
+    #actionNeeded > img, .actions > img, .actions {
+        width: 35px;
+        height: 35px;
+    }
+}
